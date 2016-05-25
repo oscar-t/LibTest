@@ -1,5 +1,28 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'LibTest'
+
+    publishedGroupId = 'com.example.oscartong.mylibrary'
+    libraryName = 'LibTest'
+    artifact = 'LibTest'
+
+    libraryDescription = 'Test library'
+
+    siteUrl = 'https://github.com/oscar-t/LibTest'
+    gitUrl = 'https://github.com/oscar-t/LibTest.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'oscar-t'
+    developerName = 'oscar tong'
+    developerEmail = 'doesntmatter'
+
+    licenseName = 'The Apache Software License, Version 1.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-1.0.txt'
+    allLicenses = ["Apache-1.0"]
+}
 
 android {
     compileSdkVersion 23
@@ -25,3 +48,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
